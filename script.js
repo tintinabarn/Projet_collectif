@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         try {
-            const response = await fetch("https://startling-tanuki-efbcea.netlify.app/submit", {
+            const response = await fetch("/submit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, text })
