@@ -27,11 +27,12 @@ app.get('/last-line', async (req, res) => {
 
 // Route pour récupérer tout le texte
 app.get('/all-lines', async (req, res) => {
-    try {
-        res.download('FILE_PATH');
-    } catch (error) {
-        return res.status(400).json({ error: 'Fichier manquant all' });
-    }
+    // try {
+    //     res.download('FILE_PATH');
+    // } catch (error) {
+    //     return res.status(400).json({ error: 'Fichier manquant all' });
+    // }
+    return res.status(200).json({ error: 'Test Fichier manquant all' });
 });
 
 // Route pour stocker un nouveau message
