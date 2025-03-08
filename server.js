@@ -32,7 +32,8 @@ app.get('/all-lines', async (req, res) => {
     // } catch (error) {
     //     return res.status(400).json({ error: 'Fichier manquant all' });
     // }
-    return res.status(200).json({ error: 'Test Fichier manquant all' });
+    const data = await fs.readFile(FILE_PATH, 'utf8');
+    res.json({ text: data });
 });
 
 // Route pour stocker un nouveau message
